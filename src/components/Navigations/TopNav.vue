@@ -1,7 +1,7 @@
 <template>
   <div>
   <h1>FoneScreener</h1>
-  <ul class='links'>
+  <ul class='TopNav--Links'>
     <router-link to='/' tag='li'><a>Home</a></router-link>
     <router-link to='/user' tag='li'><a>User</a></router-link>
   </ul>
@@ -16,7 +16,14 @@ export default {
 
 <style>
   .router-link-exact-active {
-    background: blue;
+    background: dodgerblue;
+  }
+
+  .TopNav--Links > li {
+    border: 1px red solid;
+    padding: 10px;
+    display: inline;
+    color: black;
   }
 
 </style>
