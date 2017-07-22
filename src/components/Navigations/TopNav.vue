@@ -2,8 +2,8 @@
   <div>
   <h1>FoneScreener</h1>
   <ul class='links'>
-    <li> <router-link to='/'>Home</router-link></li>
-    <li> <router-link to='/user'>User</router-link></li>
+    <router-link to='/' tag='li'><a>Home</a></router-link>
+    <router-link to='/user' tag='li'><a>User</a></router-link>
   </ul>
   </div>
 </template>
@@ -15,4 +15,8 @@ export default {
 </script>
 
 <style>
+  .router-link-exact-active {
+    background: blue;
+  }
+
 </style>
