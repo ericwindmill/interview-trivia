@@ -1,6 +1,6 @@
 <template>
   <div class='LeftNav'>
-    <div class='LeftNav--SearchBar'>SEARCH BAR</div>
+    <search></search>
     <ul class='LeftNav--Categories'>
       <li>HTML<li>
       <li>RUBY</li>
@@ -13,8 +13,11 @@
 </template>
 
 <script>
+import Search from '../Utility/Search'
 export default {
-
+  components: {
+    search: Search
+  }
 }
 </script>
 

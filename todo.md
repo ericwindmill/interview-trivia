@@ -12,3 +12,7 @@
 ## Quizes
   ### Users can take quizes. 
   ### Quizzes are random, category based, or company based. 
+
+
+  # Todo
+  - Make AddQuestion a protected route

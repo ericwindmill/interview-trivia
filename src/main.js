@@ -9,6 +9,8 @@ import App from './App'
 Vue.use(VueFire)
 Vue.config.productionTip = true
 
+export const eventBus = new Vue()
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -22,16 +22,37 @@
 </template>
 
 <script>
+import {eventBus } from '../../main'
 import { database } from '../../firebase'
 import QuestionDetail from './QuestionDetail'
-const questionsRef = database.ref('questions')
+let questionsRef = database.ref('questions')
 
 export default {
   firebase: {
     questions: questionsRef
   },
+  data() {
+    return {
+      searchTerm: ''
+    }
+  },
   components: {
     questionDetail: QuestionDetail
+  },
+  created() {
+    eventBus.$on('userSearching', (term => {
+      this.searchTerm = term
+    }))
+  },
+  watch: {
+    'searchTerm' : function (val, oldVal) {
+      let searchResults = this.$firebaseRefs
+                            .questions
+                            .child(['.key'])
+                            .child('tags')
+                            .childexists()
+                            .equalTo(val)
+    }
   }
 }
 </script>

@@ -22,10 +22,6 @@ export default {
 </script>
 
 <style>
-  .Home {
-
-  }
-
   .Home--Main {
     display: flex;
   }
