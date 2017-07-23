@@ -45,13 +45,13 @@ export default {
     }))
   },
   watch: {
-    'searchTerm' : function (val, oldVal) {
-      let searchResults = this.$firebaseRefs
-                            .questions
-                            .child(['.key'])
-                            .child('tags')
-                            .childexists()
-                            .equalTo(val)
+    'searchTerm' : async function (val, oldVal) {
+      let searchTerms = await database.ref('questions')
+        .orderByChild(`tags/${val}`)
+        .equalTo(val)
+        .once('value', questions => {
+          this.questions = questions.val()
+        })
     }
   }
 }

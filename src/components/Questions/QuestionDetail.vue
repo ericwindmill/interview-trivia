@@ -12,12 +12,12 @@
 <script>
 export default {
   props: {
-    question: () => {
-      return question
+    question: {
+      type: Object
     },
-    index: () => {
-      return index
-    }
+    index: {
+      type: Number
+    },
   }
 }
 

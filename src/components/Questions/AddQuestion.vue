@@ -36,8 +36,6 @@
 import { database } from '../../firebase'
 const questionsRef = database.ref('questions')
 
-console.log(this.tags)
-
 export default {
   firebase: {
     questions: questionsRef
