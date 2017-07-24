@@ -3,7 +3,7 @@
       <span v-html='question.answer'></span>
       <p> Company: {{question.company}} </p>
       <h4>Tags: </h4>
-      <div class='QuestionDetail--Tag' :key='tag' v-for='tag in question.tags'> 
+      <div class='QuestionDetail--Tag' v-for='(tag, i) in question.tags' :key='i'> 
           {{tag}} &nbsp;
       </div>
     </div>

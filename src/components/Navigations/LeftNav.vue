@@ -2,19 +2,34 @@
   <div class='LeftNav'>
     <search></search>
     <ul class='LeftNav--Categories'>
-      <li>HTML<li>
-      <li>RUBY</li>
-      <li>RUBY</li>
-      <li>RUBY</li>
-      <li>RUBY</li>
-      <li>RUBY</li>
+      <li @click='handleCategory' data-category='all'>All</li>
+      <li @click='handleCategory' data-category='web'>Web</li>
+      <li @click='handleCategory' data-category='html'>HTML</li>
+      <li @click='handleCategory' data-category='javascript'>JavaScript</li>
+      <li @click='handleCategory' data-category='css'>CSS</li>
+      <li @click='handleCategory' data-category='ruby'>Ruby</li>
+      <li @click='handleCategory' data-category='css'>CSS</li>
+      <li @click='handleCategory' data-category='css'>CSS</li>
     </ul>
   </div>
 </template>
 
 <script>
+import {eventBus} from '../../main'
 import Search from '../Utility/Search'
+
 export default {
+  data() {
+    return {
+      category: ''
+    }
+  },
+  methods: {
+    handleCategory(e) {
+      this.category = e.target.dataset.category
+      eventBus.$emit('chooseCategory', this.category)
+    }
+  },
   components: {
     search: Search
   }
@@ -22,8 +37,6 @@ export default {
 </script>
 
 <style>
-
-
 .LeftNav { 
   width: 200px;
   background: dodgerblue;
@@ -41,6 +54,9 @@ export default {
   padding: 10px;
   margin: 10px;
   line-height: 30px;
+  display: flex;
+  flex-flow: column;
 }
+
   
 </style>

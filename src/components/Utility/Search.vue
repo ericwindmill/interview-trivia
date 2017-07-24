@@ -1,5 +1,5 @@
 <template>
-  <input @change='handleSearch' v-model='searchTerm' type='text'></input>
+  <input @keyup='handleSearch' v-model='searchTerm' type='text'></input>
 </template>
 
 <script>
