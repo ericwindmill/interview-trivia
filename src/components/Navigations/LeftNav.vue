@@ -27,6 +27,7 @@ export default {
   methods: {
     handleCategory(e) {
       this.category = e.target.dataset.category
+      console.log(this.category)
       eventBus.$emit('chooseCategory', this.category)
     }
   },

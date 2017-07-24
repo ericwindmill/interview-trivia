@@ -4,11 +4,14 @@
       <li 
         v-for='(question, index) 
         in questions' 
-        :key='index'>
+        :key='index'
+        >
         <router-link  
           class='QuestionList--Question'
           :to="{name: 'QuestionDetail', params: { id: index }}"
-          >{{question.question}}
+          tag='li'
+          >
+            <a>{{question.question}}</a>
         </router-link>
         <router-view
             v-if='index === $route.params.id'
@@ -64,16 +67,15 @@ export default {
             this.questions = questions.val()
           })
       //handle search for companies
-      } else if (this.companyList[val]) {
+    } else if (this.companyList[val]) {
         await database.ref('questions')
           .orderByChild(`companies/${val}`)
           .equalTo(val)
           .once('value', questions => {
             this.questions = questions.val()
-            console.log(this.questions)
           })
       //handle search for tags
-      } else {
+    } else {
         await database.ref('questions')
           .orderByChild(`tags/${val}`)
           .equalTo(val)
