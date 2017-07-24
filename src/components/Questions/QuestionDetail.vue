@@ -1,7 +1,11 @@
 <template>
     <div>
       <span v-html='question.answer'></span>
-      <p> Company: {{question.company}} </p>
+      <h4> Companies: 
+        <div class='QuestionDetail--Companies' v-for='(company, i) in question.company' :key='i'>
+          {{company}} &nbsp; 
+        </div>  
+      </h4>
       <h4>Tags: </h4>
       <div class='QuestionDetail--Tag' v-for='(tag, i) in question.tags' :key='i'> 
           {{tag}} &nbsp;
