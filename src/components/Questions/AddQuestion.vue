@@ -35,10 +35,14 @@
 <script>
 import { database } from '../../firebase'
 const questionsRef = database.ref('questions')
+const companiesRef = database.ref('companies')
+const tagsRef = database.ref('tags')
 
 export default {
   firebase: {
-    questions: questionsRef
+    questions: questionsRef,
+    companies: companiesRef,
+    tags: tagsRef
   },
   data() {
     return {
@@ -51,14 +55,22 @@ export default {
   methods: {
     postQuestionToFirebase() {
       let returnTags = {}
+      let returnCompanies = {}
       let newTags = this.tags.split(",").forEach(tag => {
-        returnTags[tag.trim()] = tag
+        let formatted = tag.trim().toLowerCase()
+        returnTags[formatted] = formatted
+        this.$firebaseRefs.companies.child(`${formatted}`).set(formatted)
+      })
+      let newCompanies = this.company.split(",").forEach(company => {
+        let formatted = company.trim().toLowerCase()
+        returnCompanies[formatted] = formatted
+        this.$firebaseRefs.companies.child(`${formatted}`).set(formatted)
       })
       this.$firebaseRefs.questions.push({
         tags: returnTags,
         question: this.question,
         answer: this.answer,
-        company:  this.company
+        companies:  returnCompanies
       })
     }
   }
