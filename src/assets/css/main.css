@@ -1,0 +1,34 @@
+/*-----------
+--VARIABLES--
+-----------*/
+
+:root {
+  /*Font*/
+  --sans: 'Avenir', Helvetica, Arial, sans-serif;
+
+  /*Colors*/
+  --brand-color: #0db5bb;
+  --dark-purple: #1d1145;
+  --green-accent: #29BF89;
+  --salmon-accent: #f1a49e;
+  --pink-accent: #c66c8a;
+  --light-grey: #BDBDBD;
+  --shadow-color: rgba(50, 50, 50, .8);
+
+  /*Spacing*/
+  --spacing-unit: 30px;
+}
+
+
+/*Resets*/
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}

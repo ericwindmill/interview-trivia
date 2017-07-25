@@ -1,5 +1,6 @@
 <template>
   <div class='LeftNav'>
+    <h3>Filter Questions</h3>
     <search></search>
     <ul class='LeftNav--Categories'>
       <li @click='handleCategory' data-category='all'>All</li>
@@ -39,16 +40,8 @@ export default {
 
 <style>
 .LeftNav { 
-  width: 200px;
-  background: dodgerblue;
-}
-
-.LeftNav--SearchBar {
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  color: lightgrey;
-  margin: 10px;
+  padding: 15px;
+  border-right: 1px solid black;
 }
 
 .LeftNav--Categories {
@@ -57,6 +50,12 @@ export default {
   line-height: 30px;
   display: flex;
   flex-flow: column;
+  color: black;
+}
+
+.LeftNav--Categories > li {
+  padding: 5px;
+  border-bottom: .5px lightgrey solid;
 }
 
   

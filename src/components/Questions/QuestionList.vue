@@ -1,5 +1,6 @@
 <template>
   <div class='QuestionList'>
+    <h2> {{searchTerm}} </h2>
     <ul>
       <li 
         v-for='(question, index) 

@@ -4,6 +4,7 @@
   ### Users can search questions.
   ### Users can see questions and answers.
   ### Users can filter questions by type and company.
+  ### Intuitive (and pretty!) UI
 
 ## Users
   ### Users can log in.
