@@ -6,7 +6,17 @@
         in questions' 
         :key='index'
         >
-        <router-link  
+        <div class='QuestionList--Question'
+          @click='changeShow(index)'
+        >
+          {{question.question}}
+        </div>
+        <question-detail
+            v-show='show === index'
+            :question='question'
+            :index='index'
+        ></question-detail>
+        <!--<router-link  
           class='QuestionList--Question'
           :to="{name: 'QuestionDetail', params: { id: index }}"
           tag='li'
@@ -18,7 +28,7 @@
             :question='question'
             :index='index'
         >
-        </router-view>
+        </router-view>-->
       </li>
     </ul> 
   </div>
@@ -39,7 +49,19 @@ export default {
   data() {
     return {
       searchTerm: '',
-      companyList: {}
+      companyList: {},
+      answer: Object,
+      selectedId: Number,
+      show: false
+    }
+  },
+  methods: {
+    changeShow (index) {
+      if (this.show === index) {
+        this.show = false
+      } else { 
+        this.show = index
+      }
     }
   },
   components: {
