@@ -16,19 +16,6 @@
             :question='question'
             :index='index'
         ></question-detail>
-        <!--<router-link  
-          class='QuestionList--Question'
-          :to="{name: 'QuestionDetail', params: { id: index }}"
-          tag='li'
-          >
-            <a>{{question.question}}</a>
-        </router-link>
-        <router-view
-            v-if='index === $route.params.id'
-            :question='question'
-            :index='index'
-        >
-        </router-view>-->
       </li>
     </ul> 
   </div>

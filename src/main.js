@@ -4,10 +4,11 @@ import Vue from 'vue'
 import Firebase from 'firebase'
 import VueFire from 'vuefire'
 import router from './router'
-import VueHighlightJS from 'vue-highlightjs'
+import VuePrism from 'vue-prism'
 import App from './App'
+Vue.use(VuePrism)
+import 'prismjs/themes/prism.css'
 Vue.use(VueFire)
-Vue.use(VueHighlightJS)
 Vue.config.productionTip = true
 
 export const eventBus = new Vue()
