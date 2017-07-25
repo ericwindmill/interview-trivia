@@ -77,7 +77,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 h1, h2, h3, h4, h5 {
     padding: 0;
     margin: 0;
@@ -112,12 +112,4 @@ h1, h2, h3, h4, h5 {
     padding: 15px;
     margin: 10px;
   }
-
-  .AddQuestion--Preview--Question,
-  .AddQuestion--Preview--Answer,
-  .AddQuestion--Preview--Company,
-  .AddQuestion--Preview--Tags {
-
-  }
-
 </style>

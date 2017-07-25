@@ -33,7 +33,7 @@ export default {
   height: var(--spacing-unit);
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--blue-purple);
+  border-bottom: 1px solid var(--purple);
 }
 
 .Search--Input:focus {
@@ -45,9 +45,13 @@ export default {
 
 .Search--Button {
   padding: 5px;
-  background-color: var(--blue-purple);
+  background-color: var(--purple);
   color: white;
   border: none;
+}
+
+.Search--Button:hover {
+  cursor: pointer;
 }
 
 </style>
