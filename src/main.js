@@ -6,12 +6,15 @@ import VueFire from 'vuefire'
 import router from './router'
 import VuePrism from 'vue-prism'
 import App from './App'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 require('./assets/css/normalize.css')
 require('./assets/css/main.css')
 Vue.use(VuePrism)
 import 'prismjs/themes/prism.css'
 Vue.use(VueFire)
 Vue.config.productionTip = true
+Vue.component('icon', Icon)
 
 export const eventBus = new Vue()
 

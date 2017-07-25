@@ -26,13 +26,14 @@ export default {
 .Search {
   display: flex;
   width: 100%;
+  padding-bottom: var(--spacing-unit)
 }
 .Search--Input {
   padding: 5px;
   height: var(--spacing-unit);
   width: 100%;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--blue-purple);
 }
 
 .Search--Input:focus {
@@ -44,7 +45,7 @@ export default {
 
 .Search--Button {
   padding: 5px;
-  background-color: var(--brand-color);
+  background-color: var(--blue-purple);
   color: white;
   border: none;
 }

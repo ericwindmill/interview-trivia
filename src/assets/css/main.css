@@ -7,12 +7,13 @@
   --sans: 'Avenir', Helvetica, Arial, sans-serif;
 
   /*Colors*/
-  --brand-color: #0db5bb;
-  --dark-purple: #1d1145;
-  --green-accent: #29BF89;
-  --salmon-accent: #f1a49e;
+  --brand-color: #5AB9EA;
+  --purple: #8860D0;
+  --light-blue: #84CEEB;
+  --blue-purple: #5680E9;
   --pink-accent: #c66c8a;
-  --light-grey: #BDBDBD;
+  --red-accent: #FC4445;
+  --light-grey: #C1C8E4;
   --shadow-color: rgba(50, 50, 50, .8);
 
   /*Spacing*/

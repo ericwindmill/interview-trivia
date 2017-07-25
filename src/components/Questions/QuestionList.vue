@@ -1,6 +1,6 @@
 <template>
   <div class='QuestionList'>
-    <h2> {{searchTerm}} </h2>
+    <h2> {{searchTerm}} questions </h2>
     <ul>
       <li 
         v-for='(question, index) 
@@ -10,7 +10,11 @@
         <div class='QuestionList--Question'
           @click='changeShow(index)'
         >
-          {{question.question}}
+          <span> {{question.question}} </span>
+          <span> 
+            <icon v-show='index !== show' class='open-icon' name="chevron-down"></icon> 
+            <icon v-show='index === show' class='close-icon' name="times"></icon> 
+          </span>
         </div>
         <question-detail
             v-show='show === index'
@@ -36,7 +40,7 @@ export default {
   },
   data() {
     return {
-      searchTerm: '',
+      searchTerm: 'all',
       companyList: {},
       answer: Object,
       selectedId: Number,
@@ -50,6 +54,7 @@ export default {
       } else { 
         this.show = index
       }
+
     }
   },
   components: {
@@ -100,13 +105,36 @@ export default {
 
 <style scoped>
   .QuestionList {
-    width: 90%;
+    margin: 10px 30px;
+    width: 75%;
+    height: 85vh;
+    overflow-y: scroll; 
   }
 
-  .QuestionList--Question {
-    border: 1px solid black;
-    padding: 10px;
-    display: block;
-  }
+.QuestionList > ul {
+  padding: 0;
+}
+
+.QuestionList--Question {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px lightgrey solid;
+  padding: 20px;
+}
+
+.QuestionList--Question:hover {
+  cursor: pointer;
+}
+
+.open-icon {
+  width: auto;
+  height: 1em;
+  color: var(--blue-purple)
+}
+
+.close-icon {
+  color: var(--pink-accent)
+}
+
   
 </style>

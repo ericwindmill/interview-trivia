@@ -1,7 +1,7 @@
 <template>
   <header class='TopNav'>
     <h1>Tech Trivia</h1>
-    <h3>Pass every phone screen.</h3>
+    <h3>Submit a question</h3>
   </header>
 </template>
 
@@ -29,6 +29,7 @@ export default {
 
 .TopNav > h3 {
   color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
 }
 
 
