@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class='QuestionDetail'>
       <span v-html='question.answer'></span>
       <h4> Companies: 
-        <div class='QuestionDetail--Companies' v-for='(company, i) in question.company' :key='i'>
+        <div class='QuestionDetail--Companies' v-for='(company, i) in question.companies' :key='i'>
           {{company}} &nbsp; 
         </div>  
       </h4>
@@ -29,6 +29,10 @@ export default {
 </script>
 
 <style>
+
+  .QuestionDetail {
+    padding: 50px;
+  }
   .QuestionDetail--Tag {
     display: inline-block;
   }

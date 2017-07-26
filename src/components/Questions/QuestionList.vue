@@ -91,6 +91,7 @@ export default {
           })
       //handle search for tags
     } else {
+        console.log('here')
         await database.ref('questions')
           .orderByChild(`tags/${val}`)
           .equalTo(val)
@@ -133,7 +134,8 @@ export default {
 }
 
 .close-icon {
-  color: var(--pink-accent)
+  color: var(--pink-accent);
+  height: 1em;
 }
 
   

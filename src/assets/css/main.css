@@ -9,11 +9,12 @@
   /*Colors*/
   --brand-color: #5AB9EA;
   --purple: #8860D0;
+  --dark-purple: #5f4493;
   --light-blue: #84CEEB;
   --blue-purple: #5680E9;
   --pink-accent: #c66c8a;
   --red-accent: #FC4445;
-  --light-grey: #C1C8E4;
+  --light-grey: #e3e6f2;
   --shadow-color: rgba(50, 50, 50, .8);
 
   /*Spacing*/
@@ -32,4 +33,24 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+a {
+  color: var(--dark-purple);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+/*font-awesome reset*/
+.fa-icon {
+  color: black;
+  width: auto;
+  height: 2em; /* or any other relative font sizes */
+}
+
+.fa-icon:hover {
+  color: var(--brand-color)
 }

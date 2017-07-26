@@ -4,15 +4,18 @@
     <transition name='slide'>
       <router-view></router-view>
     </transition>
+    <foot-nav></foot-nav>
   </div>
 </template>
 
 <script>
 import topNav from './components/Navigations/TopNav'
+import footNav from './components/Navigations/FooterNav'
 export default {
   name: 'app',
   components: {
-    topNav
+    topNav,
+    footNav
   }
 }
 </script>

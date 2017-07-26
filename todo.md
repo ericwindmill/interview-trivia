@@ -21,4 +21,5 @@
   # Todo
   - Make AddQuestion a protected route
   - Add a footer with links back to me.
+  - Transition effect for main open/close functionality
 

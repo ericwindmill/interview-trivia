@@ -33,14 +33,12 @@ export default {
   height: var(--spacing-unit);
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--purple);
+  border: 1px solid var(--purple);
 }
 
 .Search--Input:focus {
-  border: none;
+  border: 1px solid var(--purple);
   box-shadow: 0px 0px 1px var(--brand-color);
-  outline: none;
-  outline-offset: -3px;
 }
 
 .Search--Button {

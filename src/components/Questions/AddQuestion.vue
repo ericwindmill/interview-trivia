@@ -59,12 +59,12 @@ export default {
       let newTags = this.tags.split(",").forEach(tag => {
         let formatted = tag.trim().toLowerCase()
         returnTags[formatted] = formatted
-        this.$firebaseRefs.companies.child(`${formatted}`).set(formatted)
+        this.$firebaseRefs.tags.child(`${formatted}`).set(formatted)
       })
       let newCompanies = this.company.split(",").forEach(company => {
-        let formatted = company.trim().toLowerCase()
-        returnCompanies[formatted] = formatted
-        this.$firebaseRefs.companies.child(`${formatted}`).set(formatted)
+        let comp = company.trim().toLowerCase()
+        returnCompanies[comp] = comp
+        this.$firebaseRefs.companies.child(`${comp}`).set(comp)
       })
       this.$firebaseRefs.questions.push({
         tags: returnTags,

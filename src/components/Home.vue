@@ -12,6 +12,7 @@ import QuestionList from './Questions/QuestionList'
 import LeftNav from './Navigations/LeftNav'
 import TopNav from './Navigations/TopNav'
 
+
 export default {
   components: {
     questionList: QuestionList,
