@@ -23,6 +23,9 @@
         ></question-detail>
       </li>
     </ul> 
+  
+
+
   </div>
 </template>
 
