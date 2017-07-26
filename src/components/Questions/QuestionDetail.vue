@@ -2,10 +2,10 @@
     <div class='QuestionDetail'>
       <div class='QuestionDetail--Answer' v-html='question.answer'></div>
       <h4> Companies: </h4>
-        <div class='QuestionDetail--Companies' v-for='(company, i) in question.companies' :key='i'>
-          {{company}} &nbsp; 
-        </div>  
-      </h4>
+      <div class='QuestionDetail--Companies' v-for='(company, i) in question.companies' :key='i'>
+        {{company}} &nbsp; 
+      </div>
+      <br />
       <h4>Tags: </h4>
       <div class='QuestionDetail--Tag' v-for='(tag, i) in question.tags' :key='i'> 
           {{tag}} &nbsp;
@@ -28,10 +28,11 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
   .QuestionDetail {
     padding: 50px;
+    border: 1px solid black;
   }
 
   .QuestionDetail--Answer {
@@ -41,5 +42,10 @@ export default {
 
   .QuestionDetail--Tag, .QuestionDetail--Companies {
     display: inline-block;
+  }
+
+  h4 {
+    display: inline-block;
+    margin: 5px;
   }
 </style>

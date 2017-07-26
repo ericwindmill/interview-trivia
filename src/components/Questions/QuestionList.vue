@@ -111,8 +111,6 @@ export default {
   .QuestionList {
     margin: 10px 30px;
     width: 75%;
-    height: 85vh;
-    overflow-y: scroll; 
   }
 
 .QuestionList > ul {

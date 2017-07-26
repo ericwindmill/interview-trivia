@@ -22,9 +22,8 @@ export default {
   padding: 0 var(--spacing-unit);
   margin: 0 0 0;
   background: #0c001a;
-  height: calc(var(--spacing-unit) * 6);
+  height: calc(var(--spacing-unit) * 3);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   }

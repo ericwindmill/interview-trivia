@@ -26,7 +26,7 @@ export default {
 .Search {
   display: flex;
   width: 100%;
-  padding-bottom: var(--spacing-unit)
+  /*padding-bottom: var(--spacing-unit)*/
 }
 .Search--Input {
   padding: 5px;

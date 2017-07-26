@@ -25,6 +25,6 @@ export default {
 <style>
   .Home--Main {
     display: flex;
-    height: 100%;
+    min-height: 85vh;
   }
 </style>

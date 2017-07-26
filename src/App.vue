@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <top-nav></top-nav>
-    <transition name='slide'>
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
     <foot-nav></foot-nav>
   </div>
 </template>
@@ -26,6 +24,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  min-height: 100%;
 }
 
 li {
