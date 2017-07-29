@@ -16,11 +16,15 @@
             <icon v-show='index === show' class='close-icon' name="times"></icon> 
           </span>
         </div>
-        <question-detail
-            v-show='show === index'
-            :question='question'
-            :index='index'
-        ></question-detail>
+        <transition name="fade" mode="in-out">
+          <question-detail
+              class='QuestionList--Detail'
+              v-transition
+              v-show='show === index'
+              :question='question'
+              :index='index'
+          ></question-detail>
+        </transition>
       </li>
     </ul> 
   
@@ -65,7 +69,7 @@ export default {
   },
   created() {
     eventBus.$on('userSearching', (term => {
-      this.searchTerm = term
+      this.searchTerm = term.trim()
     }))
     eventBus.$on('chooseCategory', (term => {
       this.searchTerm = term
@@ -137,6 +141,25 @@ export default {
 .close-icon {
   color: var(--pink-accent);
   height: 1em;
+}
+
+.QuestionList--Detail {
+    transition: all .3s ease;
+    height: 100%;
+}
+.QuestionList--Detail.v-enter,
+.QuestionList--Detail.v-leave {
+    height: 0;
+    opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s;
+}
+.fade-enter, .fade-leave-to  {
+    transform: translateY(-10px);
+  height: 0;
+  opacity: 0;
 }
 
   

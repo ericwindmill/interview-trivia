@@ -31,8 +31,10 @@ export default {
 <style scoped>
 
   .QuestionDetail {
+    background: white;
     padding: 50px;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
+    border-radius: 0 0 5px 5px;
   }
 
   .QuestionDetail--Answer {

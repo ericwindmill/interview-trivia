@@ -4,7 +4,7 @@
   ### Users can search questions.
   ### Users can see questions and answers.
   ### Users can filter questions by type and company.
-  ### Intuitive (and pretty!) UI
+  ### Intuitive (and pretty!) UI :dizzy:
 
 ## Users
   ### Users can log in.
@@ -20,6 +20,4 @@
 
   # Todo
   - Make AddQuestion a protected route
-  - Add a footer with links back to me.
-  - Transition effect for main open/close functionality
 
