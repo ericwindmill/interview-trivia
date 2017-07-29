@@ -1,10 +1,11 @@
 # Feature Timeline
 
 ## MVP's
-  ### Users can search questions.
-  ### Users can see questions and answers.
-  ### Users can filter questions by type and company.
-  ### Intuitive (and pretty!) UI :dizzy:
+  ### :white_check_mark: Users can search questions.
+  ### :white_check_mark: Users can see questions and answers.
+  ### :white_check_mark: Users can filter questions by type and company.
+
+
 
 ## Users
   ### Users can log in.
@@ -17,6 +18,8 @@
 ## Tracks
   ### i.e. Front End Track is HTML, HTTP, CSS, JS, etc. 
 
+## Forever Evolving:
+  ### Intuitive (and pretty!) UI 
 
   # Todo
   - Make AddQuestion a protected route
